@@ -18,6 +18,7 @@ on:
         options:
           - unifreq
           - codesnas
+          - jamesho0
       kernel_version:
         description: "Select kernel version"
         required: false
@@ -97,7 +98,7 @@ on:
         type: choice
         options:
           - -ophub
-          - -yourname
+          - -bi8fvm
 
 env:
   TZ: Etc/UTC
