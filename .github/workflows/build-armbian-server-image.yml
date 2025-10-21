@@ -327,9 +327,9 @@ jobs:
         run: |
           # Compile method and parameter description: https://docs.armbian.com/Developer-Guide_Build-Options
           cd build/
-          NONINTERACTIVE=yes ./compile.sh RELEASE=${{ inputs.set_release }} BOARD=odroidn2 BRANCH=current BUILD_MINIMAL=no \
+          echo "config_base" ./compile.sh RELEASE=${{ inputs.set_release }} BOARD=odroidn2 BRANCH=current BUILD_MINIMAL=no \
                            BUILD_ONLY=default HOST=armbian BUILD_DESKTOP=yes DESKTOP_ENVIRONMENT=xfce \
-                           DESKTOP_ENVIRONMENT_FLAVOUR=full DESKTOP_ENVIRONMENT_CONFIG=config_base EXPERT=yes KERNEL_CONFIGURE=no \
+                           DESKTOP_ENVIRONMENT_FLAVOUR=full DESKTOP_ENVIRONMENT_CONFIG=config_base EXPERT=no KERNEL_CONFIGURE=no \
                            COMPRESS_OUTPUTIMAGE="sha" SHARE_LOG=yes
           echo "status=success" >> ${GITHUB_OUTPUT}
 
